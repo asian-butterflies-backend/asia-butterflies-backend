@@ -3,33 +3,19 @@ import db_connection from "../database/db_connection.js";
 const ButterflyModel = db_connection.define(
   "butterflies",
   {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: "el campo title campo no puede estar vacío",
-        },
-        len: {
-          min: 2,
-          msg: "el campo title no permite menos de 2 caracteres",
-        },
-      },
-    },
+    id: { type: DataTypes.INTEGER.UNSIGNED, autoIncrement: true, primaryKey: true },
 
-    butterfly_description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: "este campo no puede estar vacío",
-        },
-        min: {
-          args: 10,
-          msg: "este campo no permite menos de 10 caracterés",
-        },
-      },
-    },
+    name: { type: DataTypes.STRING, allowNull: false },
+    sciname: { type: DataTypes.STRING, allowNull: true },
+    shortDescription: { type: DataTypes.STRING(1000), allowNull: true },
+    longDescription: { type: DataTypes.TEXT, allowNull: false },
+
+    activity: { type: DataTypes.TINYINT.UNSIGNED, allowNull: true },
+    status:   { type: DataTypes.TINYINT.UNSIGNED, allowNull: true },
+
+    region:   { type: DataTypes.STRING, allowNull: true },
+    location: { type: DataTypes.STRING, allowNull: true },
+    imageUrl: { type: DataTypes.STRING(2048), allowNull: true },
   },
   {
     timestamps: false,

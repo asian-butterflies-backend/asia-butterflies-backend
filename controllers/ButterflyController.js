@@ -7,11 +7,22 @@ export const getAllButterflies = async (req, res) => {
     res.status(500).json({ error: "Error al obtener las mariposas" });
   }
 };
-/*
-//trae una mariposa
-const getOneButterfly = async () => {
 
+//trae una mariposa
+export const getOneButterfly = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const butterfly = await ButterflyModel.findByPk(id);
+    if (!butterfly) {
+      return res.status(404).json({ error: "Mariposa no encontrada" });
+    }
+    res.status(200).json(butterfly);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error al obtener la mariposa" });
+  }
 };
+/*
 //elimina una mariposa
 const deleteButterfly = async () => {
 
