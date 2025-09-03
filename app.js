@@ -3,6 +3,7 @@ import butterflyRouter from "./routes/butterflyRoutes.js";
 import db_connection from "./database/db_connection.js"
 import ButterflyModel from "./models/ButterflyModel.js"
 
+
 export const app = express();
 
 app.get("/", (req, res) => {
@@ -23,5 +24,5 @@ try {
 }
 
 export const server = app.listen(8000, () => {
-  console.log("🚀server up in http://localhost:8000/");
+  console.log("🚀server up in http://localhost:8000/butterflies");
 });
