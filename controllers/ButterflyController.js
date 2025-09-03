@@ -1,21 +1,30 @@
 import ButterflyModel from "../models/ButterflyModel.js";
-
-// 🦋 Obtener todas las mariposas
 export const getAllButterflies = async (req, res) => {
   try {
-    // Pedir a la base de datos todas las mariposas
     const butterflies = await ButterflyModel.findAll();
-
-    // Enviar la lista de mariposas al cliente
     res.status(200).json(butterflies);
   } catch (error) {
-    // Enviar un error 500 si falla la operación
     res.status(500).json({ error: "Error al obtener las mariposas" });
   }
 };
 
-// 🦋 Obtener una mariposa por su ID
+//trae una mariposa
 export const getOneButterfly = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const butterfly = await ButterflyModel.findByPk(id);
+    if (!butterfly) {
+      return res.status(404).json({ error: "Mariposa no encontrada" });
+    }
+    res.status(200).json(butterfly);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error al obtener la mariposa" });
+  }
+};
+
+// 🦋 Eliminar una mariposa por su ID
+export const deleteButterfly = async (req, res) => {
   try {
     // Tomar el "id" de la URL
     const { id } = req.params;
@@ -23,39 +32,31 @@ export const getOneButterfly = async (req, res) => {
     // Buscar la mariposa en la base de datos
     const butterfly = await ButterflyModel.findByPk(id);
 
-    // Comprobar si no se encuentra la mariposa y enviar error 404
+    // Comprobar si no se encuentra la mariposa
     if (!butterfly) {
+      // Enviar error 404 si no existe
       return res.status(404).json({ error: "Mariposa no encontrada" });
     }
 
-    // Enviar la mariposa encontrada al cliente
-    res.status(200).json(butterfly);
+    // Eliminar la mariposa de la base de datos
+    await butterfly.destroy();
+
+    // Enviar mensaje de éxito
+    res.status(200).json({ message: "Mariposa eliminada correctamente" });
   } catch (error) {
     // Mostrar el error en consola
     console.error(error);
 
-    // Enviar un error 500 si falla la operación
-    res.status(500).json({ error: "Error al obtener la mariposa" });
+    // Enviar error 500 si falla la operación
+    res.status(500).json({ error: "Error al eliminar la mariposa" });
   }
 };
 
 
-/*
-// 🦋 Eliminar una mariposa
-const deleteButterfly = async () => {
-  // Comprobar si la mariposa existe
-  // Borrar la mariposa de la base de datos
-};
 
-// 🦋 Crear una mariposa nueva
-const createButterfly = async () => {
-  // Validar los datos recibidos del cliente
-  // Guardar la mariposa en la base de datos
-};
 
-// 🦋 Actualizar una mariposa existente
-const updateButterfly = async () => {
-  // Comprobar si la mariposa existe
-  // Actualizar los datos de la mariposa en la base de datos
-};
-*/
+//crea una mariposa
+//const createButterfly = async () => {};
+
+//actualiza una mariposa
+//const updateButterfly = async () => {};
