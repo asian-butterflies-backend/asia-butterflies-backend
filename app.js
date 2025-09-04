@@ -16,6 +16,7 @@ try {
     await db_connection.authenticate()
     console.log('conected to database:cat::rocket:')
     await ButterflyModel.sync({
+      force: true 
     })
     console.log('models syncronised✔')
 } catch (error) {
