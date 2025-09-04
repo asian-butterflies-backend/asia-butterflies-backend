@@ -134,9 +134,3 @@ export const deleteButterfly = async (req, res) => {
     res.status(500).json({ error: "Error al eliminar la mariposa" });
   }
 };
-
-//crea una mariposa
-//const createButterfly = async () => {};
-
-//actualiza una mariposa
-//const updateButterfly = async () => {};
