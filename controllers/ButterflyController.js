@@ -22,16 +22,43 @@ export const getOneButterfly = async (req, res) => {
     res.status(500).json({ error: "Error al obtener la mariposa" });
   }
 };
-/*
-//elimina una mariposa
-const deleteButterfly = async () => {
 
-};
 //crea una mariposa
-const createButterfly = async () => {
+export const createButterfly = async (req, res) => {
+  try {
+    const { 
+      name, 
+      sciname, 
+      shortDescription, 
+      longDescription, 
+      activity, 
+      status, 
+      region, 
+      location, 
+      imageUrl 
+    } = req.body;
 
+    if (!name || !longDescription) {
+      return res.status(400).json({ 
+        error: "Faltan datos obligatorios: name y longDescription son requeridos" 
+      });
+    }
+
+    const newButterfly = await ButterflyModel.create({
+      name,
+      sciname,
+      shortDescription,
+      longDescription,
+      activity,
+      status,
+      region,
+      location,
+      imageUrl,
+    });
+
+    res.status(201).json(newButterfly);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error al crear la mariposa" });
+  }
 };
-//actualiza una mariposa
-const updateButterfly = async () => {
-
-};*/

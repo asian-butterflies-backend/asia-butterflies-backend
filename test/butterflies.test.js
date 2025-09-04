@@ -33,3 +33,58 @@ describe("test butterfly crud", () => {
     });
   });
 });
+
+// test de create
+describe("POST /butterflies", () => {
+  test("should create a new butterfly with valid data", async () => {
+    const butterflyData = {
+      name: "Mariposa Test",
+      sciname: "Lepidoptera testus",
+      shortDescription: "Una mariposa de prueba",
+      longDescription: "Esta es una descripción larga de la mariposa de prueba para validar la funcionalidad",
+      activity: 1,
+      status: 1,
+      region: "Test Region",
+      location: "Test Location",
+      imageUrl: "https://example.com/butterfly.jpg"
+    };
+
+    const response = await request(app)
+      .post("/butterflies")
+      .send(butterflyData);
+
+    expect(response.status).toBe(201);
+    expect(response.headers["content-type"]).toContain("json");
+    expect(response.body).toHaveProperty("id");
+    expect(response.body).toHaveProperty("name", butterflyData.name);
+    expect(response.body).toHaveProperty("longDescription", butterflyData.longDescription);
+  });
+
+  test("should return 400 when required fields are missing", async () => {
+    const incompleteData = {
+      sciname: "Lepidoptera testus"
+    };
+
+    const response = await request(app)
+      .post("/butterflies")
+      .send(incompleteData);
+
+    expect(response.status).toBe(400);
+    expect(response.body).toHaveProperty("error");
+  });
+
+  test("should create butterfly with only required fields", async () => {
+    const minimalData = {
+      name: "Mariposa Mínima",
+      longDescription: "Descripción mínima requerida"
+    };
+
+    const response = await request(app)
+      .post("/butterflies")
+      .send(minimalData);
+
+    expect(response.status).toBe(201);
+    expect(response.body).toHaveProperty("name", minimalData.name);
+    expect(response.body).toHaveProperty("longDescription", minimalData.longDescription);
+  });
+});

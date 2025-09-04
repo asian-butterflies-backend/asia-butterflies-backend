@@ -1,10 +1,12 @@
 import express from "express";
-import { getAllButterflies, getOneButterfly } from "../controllers/butterflyController.js";
+import { getAllButterflies, getOneButterfly,createButterfly } from "../controllers/butterflyController.js";
 const butterflyRouter = express.Router();
 
 butterflyRouter.get("/", getAllButterflies);
 butterflyRouter.get("/:id", getOneButterfly);
-//butterflyRouter.post("/", createButterfly);
+
+butterflyRouter.post("/", createButterfly);
+
 //butterflyRouter.delete("/:id", deleteButterfly);
 //butterflyRouter.get("/:id", getButterflyById);
 //butterflyRouter.put("/:id", updateButterfly);
