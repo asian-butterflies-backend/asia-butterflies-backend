@@ -96,10 +96,6 @@ export const updateButterfly = async (req, res) => {
       { where: { id } }
     );
 
-    if (updated === 0) {
-      return res.status(404).json({ message: error.message });
-    }
-
     // Devolver la mariposa ya actualizada
     const updatedButterfly = await ButterflyModel.findByPk(id);
     res.status(200).json(updatedButterfly);
