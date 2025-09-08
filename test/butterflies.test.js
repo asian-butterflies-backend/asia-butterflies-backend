@@ -32,6 +32,25 @@ describe("test butterfly crud", () => {
       expect(response.body).toHaveProperty("error");
     });
   });
+  describe("PUT /butterflies/:id", () => {
+  test("should update an existing butterfly", async () => {
+    const updatedData = {
+      name: "Mariposa Actualizada",
+      longDescription: "Descripción actualizada"
+    };
+
+    const response = await request(app)
+      .put("/butterflies/1")
+      .send(updatedData);
+
+    expect(response.status).toBe(200);
+    expect(response.headers["content-type"]).toContain("json");
+    expect(response.body).toHaveProperty("id", 1);
+    expect(response.body).toHaveProperty("name", updatedData.name);
+    expect(response.body).toHaveProperty("longDescription", updatedData.longDescription);
+  });
+});
+
 });
 
 // test de create
