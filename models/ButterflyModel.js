@@ -11,9 +11,9 @@ const ButterflyModel = db_connection.define(
     longDescription: { type: DataTypes.TEXT, allowNull: false },
 
     activity: { type: DataTypes.TINYINT.UNSIGNED, allowNull: true },
-    status:   { type: DataTypes.TINYINT.UNSIGNED, allowNull: true },
+    status: { type: DataTypes.TINYINT.UNSIGNED, allowNull: true },
 
-    region:   { type: DataTypes.STRING, allowNull: true },
+    region: { type: DataTypes.STRING, allowNull: true },
     location: { type: DataTypes.STRING, allowNull: true },
     imageUrl: { type: DataTypes.STRING(2048), allowNull: true },
   },
