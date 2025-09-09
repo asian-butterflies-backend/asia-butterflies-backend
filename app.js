@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 app.use(express.json());
 app.use("/butterflies", butterflyRouter);
 
+/* manejo de errores  */
 try {
     await db_connection.authenticate()
     console.log('conected to database:cat::rocket:')
