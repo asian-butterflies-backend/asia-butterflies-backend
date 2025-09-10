@@ -1,4 +1,4 @@
-# 🚀 Asia Butterflies - Backend Environment Creation and Connection with Frontend
+# 🦋 Asia Butterflies - Backend Environment Creation and Connection with Frontend
 
 The aim of this project is to learn how to create a backend environment that will lately will connected to a frontend. The backend is created from scratch and will be connected to an already pre-existing frontend created by another group in F5. This project will enable us to learn how to properly build a backend following TDD principles, learn how to work with databases, endpoints and testing procedures. 
 
@@ -9,14 +9,14 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents 📖
 
 - [Team Organization](#team-organization)
-- [Frameworks & Libraries Used](#frameworks-libraries-used)  
-- [Databases & ORM used](#databases-orm-used)
+- [Frameworks & Libraries Used](#frameworks--libraries-used)
+- [Databases & ORM used](#databases--orm-used)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Educational License - F5](#educational-license-f5)
+- [Educational License - F5](#educational-license---f5)
 
 ---
 
