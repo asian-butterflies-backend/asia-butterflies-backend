@@ -11,12 +11,12 @@ This project is a **fullstack web application** built with:
 
 ## 📖 Table of Contents
 
-- [Team Organization](#team-organization)
-- [Frameworks & Libraries Used](#frameworks-libraries-used)  
-- [Databases & ORM used](#databases-orm-used)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Educational License - F5](#educational-license-f5)
+- [Team Organization](##team-organization)
+- [Frameworks & Libraries Used](##frameworks-libraries-used)  
+- [Databases & ORM used](##databases-orm-used)
+- [Project Structure](##project-structure)
+- [Installation](##installation)
+- [Educational License - F5](##educational-license-f5)
 
 ---
 
