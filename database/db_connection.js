@@ -1,7 +1,9 @@
 import "dotenv/config";
 import { Sequelize } from "sequelize";
 
+
 const isTest = process.env.NODE_ENV === "test";
+
 
 const db_connection = new Sequelize(
   isTest ? process.env.DB_NAME_TEST : process.env.DB_NAME, // cambia según entorno
