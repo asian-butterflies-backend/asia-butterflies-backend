@@ -39,12 +39,6 @@ export const createButterfly = async (req, res) => {
       imageUrl 
     } = req.body;
 
-    if (!name || !longDescription) {
-      return res.status(400).json({ 
-        error: "Faltan datos obligatorios: name y longDescription son requeridos" 
-      });
-    }
-
     const newButterfly = await ButterflyModel.create({
       name,
       sciname,
@@ -134,9 +128,3 @@ export const deleteButterfly = async (req, res) => {
     res.status(500).json({ error: "Error al eliminar la mariposa" });
   }
 };
-
-//crea una mariposa
-//const createButterfly = async () => {};
-
-//actualiza una mariposa
-//const updateButterfly = async () => {};

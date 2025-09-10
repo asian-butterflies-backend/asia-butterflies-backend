@@ -1,14 +1,18 @@
 import express from "express";
-import { getAllButterflies, getOneButterfly, updateButterfly, createButterfly} from "../controllers/butterflyController.js";
+import { handleValidation } from "../middlewares/handleValidation.js";
+import {idParamValidator, createButterflyValidator, updateButterflyValidator} from "../middlewares/butterflyValidators.js";
+import { getAllButterflies, getOneButterfly, updateButterfly, createButterfly, deleteButterfly} from "../controllers/butterflyController.js";
+
 const butterflyRouter = express.Router();
 
 butterflyRouter.get("/", getAllButterflies);
-butterflyRouter.get("/:id", getOneButterfly);
-
-butterflyRouter.post("/", createButterfly);
-
-//butterflyRouter.delete("/:id", deleteButterfly);
-//butterflyRouter.get("/:id", getButterflyById);
-butterflyRouter.put("/:id", updateButterfly);
+//Obtener una por id (valida :id primero)
+butterflyRouter.get("/:id", idParamValidator, handleValidation, getOneButterfly);
+// Crear (valida body primero)
+butterflyRouter.post("/", createButterflyValidator, handleValidation, createButterfly);
+// Borrar (valida :id primero)
+butterflyRouter.delete("/:id", idParamValidator, handleValidation, deleteButterfly);
+// Actualizar (valida :id y body primero)
+butterflyRouter.put("/:id", updateButterflyValidator, handleValidation, updateButterfly);
 
 export default butterflyRouter;
