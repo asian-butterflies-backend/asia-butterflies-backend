@@ -9,7 +9,7 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## Table of Contents 📖
+## Table of Contents
 
 - [Team Organization](#team-organization)
 - [Frameworks & Libraries Used](#frameworks--libraries-used)
@@ -20,7 +20,7 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## Team Organization 👩‍💻 
+## Team Organization
 
 - **Larysa**: Scrum Master / Developer  
 - **MariCarmen**: Product Owner / Developer
@@ -30,7 +30,7 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## Frameworks & Libraries Used 📦 
+## Frameworks & Libraries Used
 
 - **Node.js**  
   JavaScript runtime environment that allows using JavaScript outside the browser to build backend components such as web servers, APIs, and databases.  
@@ -48,7 +48,7 @@ This project is a **fullstack web application** built with:
     Library for testing APIs and HTTP servers. Works well together with Jest and allows simulating HTTP requests (GET, POST, PUT, etc.)  
     to your endpoints without needing to run the real server.  
 
-## Databases & ORM used 🛠️ 
+## Databases & ORM used
 
 - **MySQL**  
   Relational database management system (RDBMS) that stores data in structured tables with rows and columns.  
@@ -66,7 +66,7 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## Project Structure 🗂 
+## Project Structure
 ```
 api-butterfly/
 │── app.js              # Main entry point of the application. Initializes the server and middleware.
@@ -85,7 +85,7 @@ api-butterfly/
 ```
 ---
 
-## Installation ⚙️ 
+## Installation
 
 # Clone repository
 ```bash
