@@ -107,7 +107,7 @@ DB_DIALECT=mysql
 ```
 
 # Run up testing develop and tests (TDD)
-npm run dev
+npm run api
 npm run test
 
 ---
