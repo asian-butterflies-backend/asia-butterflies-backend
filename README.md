@@ -112,7 +112,7 @@ DB_DIALECT=mysql
 
 # Run up testing develop and tests (TDD)
 ```bash
-npm run dev
+npm run api
 npm run test
 ```
 ---
