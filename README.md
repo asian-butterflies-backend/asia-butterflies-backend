@@ -22,11 +22,11 @@ This project is a **fullstack web application** built with:
 
 ## Team Organization
 
-- **Larysa**: Scrum Master / Developer  
-- **MariCarmen**: Product Owner / Developer
-- **Angelica**: Developer 
-- **Valentina**: Developer  
-- **Marianna**: Developer  
+- **Larysa**: Scrum Master / Developer - [Github](https://github.com/ambalari)
+- **MariCarmen**: Product Owner / Developer - [Github](https://github.com/CarmenTajuelo)
+- **Angelica**: Developer - [Github](https://github.com/angiepereir)
+- **Valentina**: Developer - [Github](https://github.com/ValenMontilla7)
+- **Marianna**: Developer - [Github](https://github.com/MarianaMH1195)
 
 ---
 
