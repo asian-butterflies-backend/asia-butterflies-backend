@@ -67,7 +67,7 @@ This project is a **fullstack web application** built with:
 ---
 
 ## 🗂 Project Structure
-
+```
 api-butterfly/
 │── app.js              # Main entry point of the application. Initializes the server and middleware.
 │── package.json        # Project metadata: dependencies, scripts, and configuration.
@@ -82,22 +82,26 @@ api-butterfly/
 ├── node_modules/       # Installed dependencies managed by NPM or Yarn (auto-generated).
 ├── routes/             # API endpoints definition. Each route maps to a controller method.
 └── test/               # Automated tests (unit, integration). Example: butterfly.test.js
-
+```
 ---
 
 ## ⚙️ Installation
 
 # Clone repository
+```bash
 git clone https://github.com/asian-butterflies-backend/asia-butterflies-backend.git
 cd asia-butterflies-backend
+```
 
 # Install dependencies
+```bash
 npm install
+```
 
 # Create .env for environment Variables 
 Create a .env file in LOCAL with the following data:
 
-```
+```bash
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=[--your password here--]
@@ -107,9 +111,10 @@ DB_DIALECT=mysql
 ```
 
 # Run up testing develop and tests (TDD)
+```bash
 npm run dev
 npm run test
-
+```
 ---
 
 ## Educational License - F5
