@@ -20,7 +20,7 @@ app.use("/butterflies", butterflyRouter);
 try {
     await db_connection.authenticate()
     console.log('conected to database:cat::rocket:')
-    await ButterflyModel.sync({})
+    await ButterflyModel.sync()
     console.log('models syncronised✔')
 } catch (error) {
     console.log(`error: ${error}`)
