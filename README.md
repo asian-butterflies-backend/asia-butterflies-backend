@@ -1,4 +1,4 @@
-# 🚀 Asia Butterflies - Backend Environment Creation and Connection with Frontend
+# 🦋 Asia Butterflies - Backend Environment Creation and Connection with Frontend
 
 The aim of this project is to learn how to create a backend environment that will lately will connected to a frontend. The backend is created from scratch and will be connected to an already pre-existing frontend created by another group in F5. This project will enable us to learn how to properly build a backend following TDD principles, learn how to work with databases, endpoints and testing procedures. 
 
@@ -9,28 +9,28 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 - [Team Organization](#team-organization)
-- [Frameworks & Libraries Used](#frameworks-libraries-used)  
-- [Databases & ORM used](#databases-orm-used)
+- [Frameworks & Libraries Used](#frameworks--libraries-used)
+- [Databases & ORM used](#databases--orm-used)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Educational License - F5](#educational-license-f5)
+- [Educational License - F5](#educational-license---f5)
 
 ---
 
-## 👩‍💻 Team Organization
+## Team Organization
 
-- **Larysa**: Scrum Master / Developer  
-- **MariCarmen**: Product Owner / Developer
-- **Angelica**: Developer 
-- **Valentina**: Developer  
-- **Marianna**: Developer  
+- **Larysa**: Scrum Master / Developer - [Github](https://github.com/ambalari)
+- **MariCarmen**: Product Owner / Developer - [Github](https://github.com/CarmenTajuelo)
+- **Angelica**: Developer - [Github](https://github.com/angiepereir)
+- **Valentina**: Developer - [Github](https://github.com/ValenMontilla7)
+- **Marianna**: Developer - [Github](https://github.com/MarianaMH1195)
 
 ---
 
-## 📦 Frameworks & Libraries Used
+## Frameworks & Libraries Used
 
 - **Node.js**  
   JavaScript runtime environment that allows using JavaScript outside the browser to build backend components such as web servers, APIs, and databases.  
@@ -48,7 +48,7 @@ This project is a **fullstack web application** built with:
     Library for testing APIs and HTTP servers. Works well together with Jest and allows simulating HTTP requests (GET, POST, PUT, etc.)  
     to your endpoints without needing to run the real server.  
 
-## 🛠️ Databases & ORM used
+## Databases & ORM used
 
 - **MySQL**  
   Relational database management system (RDBMS) that stores data in structured tables with rows and columns.  
@@ -66,7 +66,7 @@ This project is a **fullstack web application** built with:
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 ```
 api-butterfly/
 │── app.js              # Main entry point of the application. Initializes the server and middleware.
@@ -85,7 +85,7 @@ api-butterfly/
 ```
 ---
 
-## ⚙️ Installation
+## Installation
 
 # Clone repository
 ```bash
