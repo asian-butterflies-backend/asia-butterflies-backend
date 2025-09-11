@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "api": "node app.js",
+    "api": "nodemon app.js",
     "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll --no-cache --detectOpenHandles"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
     "mysql2": "^3.14.4",
+    "nodemon": "^3.1.10",
     "sequelize": "^6.37.7"
   }
 }
