@@ -83,6 +83,7 @@ api-butterfly/
 ├── routes/             # API endpoints definition. Each route maps to a controller method.
 └── test/               # Automated tests (unit, integration). Example: butterfly.test.js
 ```
+
 ---
 
 ## Installation
